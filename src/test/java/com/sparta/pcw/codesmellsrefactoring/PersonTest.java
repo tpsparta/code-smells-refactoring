@@ -43,8 +43,9 @@ public class PersonTest
     @Test
     @DisplayName("toString returns correct information")
     public void toString_ContainsExpectedStrings()
-    {
-        var subject = new Person("Cathy", "French", 4, "High Street", "Stafford");
+    {   
+        var addr = new Address( 4, "High Street", "Stafford");
+        var subject = new Person("Cathy", "French",addr);
         subject.setAge(22);
         var result = subject.toString();
         MatcherAssert.assertThat(
