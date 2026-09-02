@@ -6,7 +6,6 @@ public class Person
     private final String firstName;
     private final String lastName;
     private int age;
-    private String hobbies;
     private int houseNo = 0;
     private String street = "";
     private String town = "";
@@ -17,9 +16,9 @@ public class Person
         this.lastName = lName;
     }
 
-    public Person(String firstName, String lName, int hNo, String street, String town) {
+    public Person(String firstName, String lName, int houseNo, String street, String town) {
         this(firstName, lName);
-        this.houseNo = hNo;
+        this.houseNo = houseNo;
         this.street = street;
         this.town = town;
     }
@@ -40,12 +39,11 @@ public class Person
 
     public String move() {
         return "Walking along";
-  //      System.out.println("Can't get here");
     }
 
     @Override
     public  String toString() {
-        var addressString = "Address: " + houseNo + " " + street + ", "  + town;
+        String addressString = "Address: " + houseNo + " " + street + ", "  + town;
 
         if (addressString.equals("Address: 0 , ")) {
             addressString = "Address: <no address set>";
@@ -57,10 +55,6 @@ public class Person
                              lastName,
                              age,
                              addressString);
-}
+    }
 
-//    public int stupidMethod()
-//    {
-//        return 3;
-//    }
 }
