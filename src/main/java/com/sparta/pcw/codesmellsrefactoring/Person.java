@@ -5,9 +5,7 @@ public class Person
     private final String firstName;
     private final String lastName;
     private int age;
-    private int houseNo = 0;
-    private String street = "";
-    private String town = "";
+    private Address address;
 
     public Person(String firstName, String lastName)
     {
@@ -17,9 +15,7 @@ public class Person
 
     public Person(String firstName, String lastName, int houseNo, String street, String town) {
         this(firstName, lastName);
-        this.houseNo = houseNo;
-        this.street = street;
-        this.town = town;
+        this.address = new Address(houseNo, street, town);
     }
 
     public int getAge() {
@@ -46,16 +42,7 @@ public class Person
                              super.toString(),
                              getFullName(),
                              age,
-                             getAddressString());
-    }
-
-    private String getAddressString() {
-        String addressString = "Address: " + houseNo + " " + street + ", "  + town;
-
-        if (addressString.equals("Address: 0 , ")) {
-            addressString = "Address: <no address set>";
-        }
-        return addressString;
+                             this.address.getAddressString());
     }
 
 }
