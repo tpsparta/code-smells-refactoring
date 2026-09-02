@@ -4,21 +4,21 @@ package com.sparta.generics;
 
 //  Generics require object types, not primitives.
 
-public class IntegerRectangle {
+public class Rectangle<T> {
 
-    private Integer length;
-    private Integer width;
+    private T length;
+    private T width;
 
-    public IntegerRectangle(Integer length, Integer width) {
+    public Rectangle(T length, T width) {
         this.length = length;
         this.width = width;
     }
     
-    public Integer getLength() {
+    public T getLength() {
         return length;
     }
 
-    public Integer getWidth() {
+    public T getWidth() {
         return width;
     }
 
