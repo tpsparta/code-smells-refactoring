@@ -1,8 +1,6 @@
 package com.sparta.generics;
 
-//  Cannot use type-specific methods with generics; must cast first.
 
-//  Generics require object types, not primitives.
 
 public class Rectangle<T> {
 
@@ -21,6 +19,16 @@ public class Rectangle<T> {
     public T getWidth() {
         return width;
     }
+
+    public void setLength(T length) {
+        this.length = length;
+    }
+
+    public void setWidth(T width) {
+        this.width = width;
+    }
+
+    
 
 
 }
