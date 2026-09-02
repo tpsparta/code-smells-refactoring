@@ -48,10 +48,9 @@ public class Person
             addressString = "Address: <no address set>";
         }
 
-        return String.format("%s Name: %s  %s Age: %s. %s",
+        return String.format("%s Name: %s Age: %s. %s",
                              super.toString(),
-                             firstName,
-                             lastName,
+                             getFullName(),
                              age,
                              addressString);
     }

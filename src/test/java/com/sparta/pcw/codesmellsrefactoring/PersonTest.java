@@ -49,7 +49,7 @@ public class PersonTest
         var result = subject.toString();
         MatcherAssert.assertThat(
                 result,
-                containsString("Name: Cathy  French Age: 22. Address: 4 High Street, Stafford"));
+                containsString("Name: Cathy French Age: 22. Address: 4 High Street, Stafford"));
         MatcherAssert.assertThat(result, containsString("Person"));
     }
 
