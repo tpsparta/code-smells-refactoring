@@ -1,6 +1,5 @@
 package com.sparta.pcw.codesmellsrefactoring;
 
-// Class to represent a Person
 public class Person
 {
     private final String firstName;
@@ -10,14 +9,14 @@ public class Person
     private String street = "";
     private String town = "";
 
-    public Person(String firstName, String lName)
+    public Person(String firstName, String lastName)
     {
         this.firstName = firstName;
-        this.lastName = lName;
+        this.lastName = lastName;
     }
 
-    public Person(String firstName, String lName, int houseNo, String street, String town) {
-        this(firstName, lName);
+    public Person(String firstName, String lastName, int houseNo, String street, String town) {
+        this(firstName, lastName);
         this.houseNo = houseNo;
         this.street = street;
         this.town = town;
