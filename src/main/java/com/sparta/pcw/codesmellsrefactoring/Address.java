@@ -25,15 +25,16 @@ public class Address {
         return this.street;
     }
 
-    public String getTown() {
-        return this.town;
-    }
-
     public void setStreet(String street) {
         this.street = street;
     }
 
-    public String getAddressString() {
+    public String getTown() {
+        return this.town;
+    }
+
+    @Override
+    public String toString() {
         String addressString = "Address: " + houseNo + " " + street + ", "  + town;
 
         if (addressString.equals("Address: 0 , ")) {

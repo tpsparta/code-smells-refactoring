@@ -42,7 +42,7 @@ public class Person
                              super.toString(),
                              getFullName(),
                              age,
-                             this.address.getAddressString());
+                             this.address.toString());
     }
 
 }
