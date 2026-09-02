@@ -13,9 +13,9 @@ public class Person
         this.lastName = lastName;
     }
 
-    public Person(String firstName, String lastName, int houseNo, String street, String town) {
+    public Person(String firstName, String lastName, Address address) {
         this(firstName, lastName);
-        this.address = new Address(houseNo, street, town);
+        this.address = address;
     }
 
     public int getAge() {
