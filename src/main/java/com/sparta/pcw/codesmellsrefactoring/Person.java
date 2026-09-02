@@ -42,17 +42,20 @@ public class Person
 
     @Override
     public  String toString() {
+        return String.format("%s Name: %s Age: %s. %s",
+                             super.toString(),
+                             getFullName(),
+                             age,
+                             getAddressString());
+    }
+
+    private String getAddressString() {
         String addressString = "Address: " + houseNo + " " + street + ", "  + town;
 
         if (addressString.equals("Address: 0 , ")) {
             addressString = "Address: <no address set>";
         }
-
-        return String.format("%s Name: %s Age: %s. %s",
-                             super.toString(),
-                             getFullName(),
-                             age,
-                             addressString);
+        return addressString;
     }
 
 }
