@@ -1,9 +1,9 @@
 package com.sparta.pcw.codesmellsrefactoring;
 
 // Class to represent a Person
-public class BaseClass
+public class Person
 {
-    private final String fn;
+    private final String firstName;
     private final String lastName;
     private int age;
     private String hobbies;
@@ -11,14 +11,14 @@ public class BaseClass
     private String street = "";
     private String town = "";
 
-    public BaseClass(String fName, String lName)
+    public Person(String firstName, String lName)
     {
-        this.fn = fName;
+        this.firstName = firstName;
         this.lastName = lName;
     }
 
-    public BaseClass(String fName, String lName, int hNo, String street, String town) {
-        this(fName, lName);
+    public Person(String firstName, String lName, int hNo, String street, String town) {
+        this(firstName, lName);
         this.houseNo = hNo;
         this.street = street;
         this.town = town;
@@ -35,7 +35,7 @@ public class BaseClass
     }
 
     public String getFullName() {
-        return fn + " " + lastName;
+        return firstName + " " + lastName;
     }
 
     public String move() {
@@ -53,7 +53,7 @@ public class BaseClass
 
         return String.format("%s Name: %s  %s Age: %s. %s",
                              super.toString(),
-                             fn,
+                             firstName,
                              lastName,
                              age,
                              addressString);
