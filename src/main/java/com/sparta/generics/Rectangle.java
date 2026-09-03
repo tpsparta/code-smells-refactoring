@@ -2,7 +2,7 @@ package com.sparta.generics;
 
 
 
-public class Rectangle<T> {
+public class Rectangle<T extends Number> {
 
     private T length;
     private T width;
@@ -28,7 +28,7 @@ public class Rectangle<T> {
         this.width = width;
     }
 
-    
+
 
 
 }

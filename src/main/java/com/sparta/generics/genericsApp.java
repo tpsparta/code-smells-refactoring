@@ -7,4 +7,9 @@ public class genericsApp {
         rectangle.getWidth();
         System.out.println("Area: " + rectangle.getLength() * rectangle.getWidth());
     }
+
+
+    static <V, T> V outputToConsole(V value, T type) {
+        return value;
+    }
 }
