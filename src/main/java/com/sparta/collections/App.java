@@ -9,8 +9,8 @@ import java.util.List;
 public class App {
 
     public static void main(String[] args) {
+        
         System.out.println("Hello World!");
-
 
         HashSet<String> names = new HashSet<>(
             List.of("Terry", "Cathy", "John", "Cathy", "Terry", "John", "Cathy", "Terry")

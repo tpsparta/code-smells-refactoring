@@ -28,7 +28,4 @@ public class Rectangle<T extends Number> {
         this.width = width;
     }
 
-
-
-
 }
